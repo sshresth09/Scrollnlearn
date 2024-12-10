@@ -266,7 +266,7 @@ const extractYouTubeId = (url: string): string | null => {
 // Function to check if a YouTube link is valid
 const isYouTubeLinkValid = async (videoId: string) => {
     try {
-        const response = await axios.get(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=AIzaSyA_jA0kxP4a5lpwbTqin5gCZNNV50mWft0&part=status`);
+        // const response = await axios.get(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=AIzaSyA_jA0kxP4a5lpwbTqin5gCZNNV50mWft0&part=status`);
         return response.data.items.length > 0;
     } catch (error) {
         console.error('Error validating YouTube link:', error);
